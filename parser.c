@@ -4,14 +4,10 @@
 #include "parser.h"
 
 char ** parse_args( char * line ){
-  char **container;
+  char **container = malloc(64);
   char *mark = line;
-  char *head;
-  while(mark){
-    head = strsep(mark," ");
-    *container = head;
-    container++;
-    head = mark;
-  }
+  int x=0;
+  while(container[x] =  strsep(&mark," "))
+    x++;
   return container;
-}
+} 
